@@ -1,9 +1,15 @@
 // JavaScript code to toggle menu when hamburger button is clicked
 const menuIcon = document.querySelector('.menu-icon');
 const bodyEl = document.querySelector('body');
+const menuIconn = document.querySelector('.menu-iconn');
+const blah = document.querySelector('.navbar');
 
 menuIcon.addEventListener('click', function() {
   bodyEl.classList.toggle('menu-open');
+});
+
+menuIconn.addEventListener('click', function() {
+  blah.classList.toggle('menu-close');
 });
 
 import { initializeApp } from 'firebase/app'
@@ -32,7 +38,7 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 const auth = getAuth()
 
-//digning out
+//Signing out
 const logoutButton = document.querySelector('.logout')
 logoutButton.addEventListener('click', () => {
   signOut(auth)

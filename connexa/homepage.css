@@ -8,7 +8,23 @@
     margin-left: 10px;
 }
 
+.menu-iconn {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
 .menu-icon span {
+    background-color: purple;
+    height: 3px;
+    width: 20px;
+}
+
+.menu-iconn span {
     background-color: purple;
     height: 3px;
     width: 20px;
@@ -21,8 +37,10 @@
     left: -250px;
     width: 200px;
     height: 100%;
-    box-shadow: 2px 2px 10px rgb(255, 255, 255);
+    box-shadow: 2px 2px 10px black;
+    background-color: white;
     transition: left 0.3s ease-in;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .menu ul {
@@ -37,15 +55,19 @@
 
 .menu a {
     text-decoration: none;
-    color: #444;
+    color: red;
     font-size: 18px;
 }
 
 /* CSS code to show menu items when hamburger button is clicked */
 .menu-open .menu {
-    left: 0;
-    
+    left: 0; 
 }
+
+.menu-close{
+
+ }
+
 * {
     margin: 0;
     padding: 0;
@@ -67,7 +89,7 @@
     font-family: Arial;
     text-align: center;
     padding-top: 1px;
-    margin-left: 200px;
+    margin-left: 175px;
     margin-top: 100px;
 }
 
@@ -93,7 +115,7 @@ ul li a:hover {
 
 .search {
     width: 330px;
-    margin-left: 500px;
+    margin-left: 450px;
     padding-top: 350px;
     font-size: 30px;
 }
