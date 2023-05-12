@@ -35,10 +35,10 @@ signupForm.addEventListener('submit', (e) => {
     .then((cred) => {
       console.log('user created:', cred.user)
       alert("SignUp Successfull")
-      window.location.assign("homepage.html")
+      window.location.assign("index.html")
     })
     .catch((err) => {
-      console.log(err.message)
+      alert(err.message)
     })
 })
 

@@ -204,13 +204,13 @@ ul li a:hover {
     background: transparent;
     border: 1px solid #5f4b8b;
     margin-top: 13px;
-    color: #fff;
     border-right: none;
     font-size: 16px;
     float: left;
     padding: 10px;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
+
 }
 
 .btn {

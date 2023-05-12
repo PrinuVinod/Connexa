@@ -1,15 +1,9 @@
 // JavaScript code to toggle menu when hamburger button is clicked
 const menuIcon = document.querySelector('.menu-icon');
 const bodyEl = document.querySelector('body');
-const menuIconn = document.querySelector('.menu-iconn');
-const blah = document.querySelector('.navbar');
 
 menuIcon.addEventListener('click', function() {
   bodyEl.classList.toggle('menu-open');
-});
-
-menuIconn.addEventListener('click', function() {
-  blah.classList.toggle('menu-close');
 });
 
 import { initializeApp } from 'firebase/app'
@@ -23,13 +17,13 @@ import {
 } from 'firebase/auth'
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAxPWBtZZNy_kcHISumocwqNVTr7rPF7Ig",
-  authDomain: "connexa-bb297.firebaseapp.com",
-  projectId: "connexa-bb297",
-  storageBucket: "connexa-bb297.appspot.com",
-  messagingSenderId: "642796163869",
-  appId: "1:642796163869:web:bb29d9c7d5a978c23a47f4"
-}
+  apiKey: "AIzaSyCfE3wMFDD-NnNjxYReuR3IGWnb71wqgPg",
+  authDomain: "connexa-ea713.firebaseapp.com",
+  projectId: "connexa-ea713",
+  storageBucket: "connexa-ea713.appspot.com",
+  messagingSenderId: "419493741556",
+  appId: "1:419493741556:web:9bfc554140cc9046d76fa1"
+};
 
 //intialixe firebase app
 initializeApp(firebaseConfig)
@@ -49,4 +43,11 @@ logoutButton.addEventListener('click', () => {
     .catch((err) => {
       console.log(err.message)
     })
+})
+
+const searchbtn = document.querySelector('#search')
+const input = document.querySelector("#srch")
+searchbtn.addEventListener('click', (e) => {
+  e.preventDefault()
+  window.location.href = `http://${window.location.host}/searchpage.html?area=${input.value}`
 })

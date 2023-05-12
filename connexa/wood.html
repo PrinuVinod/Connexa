@@ -8,95 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fontawesome.com/icons/star?f=classic&s=light&pc=%234b1f51">
     <script src="https://kit.fontawesome.com/1f3557b510.js" crossorigin="anonymous"></script>
-    <title>Kanjirapally - Wood-Cutter</title>
+    <title>Wood-Cutter</title>
 </head>
 <body>
+    <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="menu">
+        <ul>
+            <br>
+            <li class="hm"><a href="index.html">
+                    <font color="black">HOME</font>
+                </a></li>
+            <li class="abt"><a href="about.html">
+                    <font color="black">ABOUT</font>
+                </a></li>
+            <li class="cont"><a href="contact.html">
+                    <font color="black">CONTACT</font>
+                </a></li>
+            <li>
+                <button class="logout">Log Out</button>
+            </li>
+        </ul>
+    </nav>
     <div class="testimonials">
         <div class="inner">
-            <h1>Wood-cutters nearby</h1>
-        <div class="border"></div>
-
-        <div class="row">
-            <div class="column">
-                <div class="testimonial">
-                    <div class="name">Full name</div>
-                    <div class="phno">Email</div>
-                    <div class="phno"></div>
-                    <div class="stars">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor exercitationem molestiae debitis!
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="testimonial">
-                    <div class="name">Full name</div>
-                    <div class="phno">Email</div>
-                    <div class="phno"></div>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor exercitationem molestiae debitis!
-
-                    </p>
-                </div>
-            </div>
-
-
-            <div class="column">
-                <div class="testimonial">
-                    <div class="name">Full name</div>
-                    <div class="phno">Email</div>
-                    <div class="phno"></div>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor exercitationem molestiae debitis!
-
-                    </p>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="testimonial">
-                    <div class="name">Full name</div>
-                    <div class="phno">Email</div>
-                    <div class="phno"></div>
-                    <div class="stars">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor exercitationem molestiae debitis!
-
-                    </p>
-                </div>
-            </div>
+            <h1>Wood Cutters nearby</h1>
+            <div class="border"></div>
+            <div class="row" id="workers-container"></div>
         </div>
-
     </div>
-        </div>
     <h2></h2>
+    <script type="module" src="wood.js"></script>
 </body>
 </html>

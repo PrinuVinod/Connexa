@@ -1,13 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<html>
+<head>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="menu-icon">
+        <span></span>   
+        <span></span>
+        <span></span>
+    </div>
+    
+    <!-- HTML code for menu items (initially hidden) -->
+    <nav class="menu">
+        <div class="menu-iconn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul> 
+            <br>
+            <li class="hm"><a href="index.html">
+                    <font color="black">HOME</font>
+                </a></li>
+            <li class="abt"><a href="about.html">
+                    <font color="black">ABOUT</font>
+                </a></li>
+            <li class="cont"><a href="contact.html">
+                    <font color="black">CONTACT</font>
+                </a></li>
+            <li>
+                <button class="logout">Log Out</button>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">Connexa</h2>
+        </div>
+        <div class="search">
+            <input class="srch" type="srch" id="srch" placeholder="Type to search" required>
+            <a id="search"> <button class="btn">Search</button></a>
+        </div>
+    </div>
+    <script type="module" src="index.js"></script>
+</body>
 </html>
