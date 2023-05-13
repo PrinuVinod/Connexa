@@ -1,10 +1,29 @@
 // JavaScript code to toggle menu when hamburger button is clicked
-const menuIcon = document.querySelector('.menu-icon');
-const bodyEl = document.querySelector('body');
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
 
-menuIcon.addEventListener('click', function() {
-  bodyEl.classList.toggle('menu-open');
-});
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
 
 import { initializeApp } from 'firebase/app'
 import {
@@ -35,6 +54,19 @@ const auth = getAuth()
 //Signing out
 const logoutButton = document.querySelector('.logout')
 logoutButton.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      alert("Successfully Logged Out")
+      window.location.assign("login.html")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+//Signing out2
+const logoutButtonn = document.querySelector('.logoutt')
+logoutButtonn.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       alert("Successfully Logged Out")

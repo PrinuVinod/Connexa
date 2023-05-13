@@ -12,47 +12,42 @@
     <script src="https://kit.fontawesome.com/1f3557b510.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <nav class="menu">
-        <ul>
-            <br>
-            <li class="hm"><a href="index.html">
-                    <font color="black">HOME</font>
-                </a></li>
-            <li class="abt"><a href="about.html">
-                    <font color="black">ABOUT</font>
-                </a></li>
-            <li class="cont"><a href="contact.html">
-                    <font color="black">CONTACT</font>
-                </a></li>
-            <li>
-                <button class="logout">Log Out</button>
-            </li>
-        </ul>
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <ul class="menu">
+        <li class="hm"><a href="index.html">
+                <font color="black">HOME</font>
+            </a></li>
+        <li class="abt"><a href="about.html">
+                <font color="black">ABOUT</font>
+            </a></li>
+        <li class="cont"><a href="contact.html">
+                <font color="black">CONTACT</font>
+            </a></li>
+        <li class="line"><strong>----------------------</strong></li>
+        <li>
+            <button class="logout">Log Out</button>
+        </li>
+        <li class="logg">
+            <button class="logoutt">LogIn</button>
+        </li>
+    </ul>
+    <button class="hamburger">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+    </button>
+    <br><br>
     <div class="navbar">
         <div class="icon">
             <h2 class="logo">Connexa</h2>
         </div>
         <div class="search">
-            <input class="srch" type="search" name="" placeholder="Type to search">
+            <input class="srch" type="srch" id="srch" placeholder="Type to search" required>
             <a id="search"> <button class="btn">Search</button></a>
         </div>
     </div>
     <div class="container">
         <h1>CHOOSE YOUR SERVICE</h1>
         <div class="row">
-            
             <div onclick="electrician()" class="service">
                 <i class="fa-solid fa-plug-circle-bolt"></i>
                 <h2>Electrician</h2>
@@ -156,9 +151,7 @@
                 </script>
                 <p>People who have experience on repairing cars.</p>
             </div>
-
             
-
             <div onclick="painter()" class="service">
                 <i class="fa-solid fa-brush"></i>
                 <h2>Painter or Decorator</h2>
@@ -210,9 +203,7 @@
                 </script>
                 <p>People who can help you build strong house.</p>
             </div>
-
             
-
             <div onclick="masonry()" class="service">
                 <i class="fa-solid fa fa-building-o"></i>
                 <h2>Mason</h2>

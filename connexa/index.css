@@ -1,118 +1,3 @@
-.menu-icon {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    height: 18px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.menu-iconn {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 18px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.menu-icon span {
-    background-color: purple;
-    height: 3px;
-    width: 20px;
-}
-
-.menu-iconn span {
-    background-color: purple;
-    height: 3px;
-    width: 20px;
-}
-
-/* CSS code for menu items (initially hidden) */
-.menu {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    box-shadow: 2px 2px 10px black;
-    background-color: white;
-    transition: left 0.3s ease-in;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.menu ul {
-    margin: 0;
-    padding: 10px;
-    list-style-type: none;
-}
-
-.menu li {
-    margin-bottom: 20px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: red;
-    font-size: 18px;
-}
-
-/* CSS code to show menu items when hamburger button is clicked */
-.menu-open .menu {
-    left: 0; 
-}
-
-.menu-close{
-
- }
-
-* {
-    margin: 0;
-    padding: 0;
-}
-.navbar {
-    width: 1200px;
-    height: 75px;
-    margin: auto;
-}
-
-.icon {
-    width: 200px;
-    float: left;
-    height: 70px;
-}
-
-.logo {
-    font-size: 200px;
-    font-family: Arial;
-    text-align: center;
-    padding-top: 1px;
-    margin-left: 175px;
-    margin-top: 100px;
-}
-
-ul li
-{
-    list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
-    font-size: 14px;
-}
-
-ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-family: Arial;
-    font-weight: bold;
-    transition: 0.4s ease-in-out;
-}
-
-ul li a:hover {
-    color: purple;
-}
-
 .search {
     width: 330px;
     margin-left: 450px;
@@ -123,11 +8,11 @@ ul li a:hover {
 .srch {
     font-family: "Times New Roman";
     width: 200px;
-    height: 20px;
+    height: 40px;
     background: transparent;
-    border: 1px solid purple;
+    border: 1px solid orange;
     margin-top: 13px;
-    color: purple;
+    color: orange;
     border-right: none;
     font-size: 30px;
     float: left;
@@ -139,8 +24,8 @@ ul li a:hover {
 .btn {
     width: 100px;
     height: 40px;
-    background: purple;
-    border: 2px solid purple;
+    background: orange;
+    border: 2px solid orange;
     margin-top: 13px;
     color: #fff;
     font-size: 20px;
@@ -183,7 +68,6 @@ ul li a:hover {
 .content .cn {
     width: 160px;
     height: 40px;
-    background: purple;
     border: none;
     margin-bottom: 10px;
     margin-left: 20px;
@@ -194,35 +78,192 @@ ul li a:hover {
 
 .content .cn a {
     text-decoration: none;
-    color: #000;
 }
 
 .content span {
-    color:purple;
     font-size: 60px;
+}
+
+.navbar {
+    width: 1200px;
+    height: 75px;
+    margin: auto;
+}
+
+.icon {
+    width: 200px;
+    float: left;
+    height: 70px;
+}
+
+.logo {
+    font-size: 200px;
+    font-family: Arial;
+    text-align: center;
+    padding-top: 1px;
+    margin-left: 175px;
+    margin-top: 100px;
+    color: white;
 }
 
 h1 {
     text-align: left;
 }
+
 body {
-    background-color: white;
+    background-color: black;
 }
+
+/*new*/
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 185px;
+    height: 770px;
+    background-color: orange;
+    transition: left 0.3s ease-in;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul li {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: orange;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+}
+
+.closeIcon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: orange;
+    color: black;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.hamburger,
+.bar {
+    position: fixed;
+}
+
+.hamburger {
+    display: block;
+    top: 5%;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar {
+    top: 3px;
+    background: white;
+    width: 20px;
+    height: 4px;
+    transition: all .3s ease-in;
+}
+
+#bar2 {
+    top: 11px;
+}
+
+#bar3 {
+    top: 19px;
+}
+
+/*menu*/
 .hm {
     margin-left: 60px;
+    font-size: medium;
 }
 
 .abt {
     margin-left: 55px;
+    font-size: medium;
 }
 
 .cont {
     margin-left: 45px;
+    font-size: medium;
+    margin-left: 50px;
 }
 
-.signout {
-    padding-top: 100px;
-    width: 100px;
+.logout {
+    border: 0px;
+    color: white;
+    background-color: orange;
+    font-size: 25px;
     margin-left: 45px;
-    font-family: 'Times New Roman', Times, serif;
+}
+
+.logoutt {
+    border: 0px;
+    color: white;
+    background-color: orange;
+    font-size: 25px;
+    margin-left: 55px;
+}
+
+.line {
+    color: black;
+    font-size: larger;
+    margin-left: 20px;
 }
