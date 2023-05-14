@@ -79,6 +79,7 @@ logoutButtonn.addEventListener('click', () => {
 
 const searchbtn = document.querySelector('#search')
 const input = document.querySelector("#srch")
+const searchForm = document.querySelector("#search-form")
 searchbtn.addEventListener('click', (e) => {
   e.preventDefault()
   window.location.href = `http://${window.location.host}/searchpage.html?area=${input.value}`
