@@ -162,12 +162,12 @@ button {
     margin-left: 45px;
 }
 
-.logoutt {
+.logouttt {
     border: 0px;
-    color: white;
+    color: black;
     background-color: orange;
     font-size: 25px;
-    margin-left: 55px;
+    margin-left: 1px;
 }
 
 .line {

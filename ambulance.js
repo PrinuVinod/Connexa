@@ -27,12 +27,10 @@ menuItems.forEach(
 
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
-  query, where, orderBy, serverTimestamp, getDocs, updateDoc, getDoc
+  getFirestore, collection, query, where, getDocs
 } from 'firebase/firestore'
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, 
-  signInWithEmailAndPassword, onAuthStateChanged
+  getAuth, signOut, onAuthStateChanged
 } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -88,6 +86,37 @@ const workerComponent = (worker) => {
     </div>`
 }
 
+//Signing out
+const logoutButton = document.querySelector('.logout')
+logoutButton.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      alert("Successfully Logged Out")
+      window.location.assign("signup.html")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+//Signing out3
+const logoutButtonnn = document.querySelector('.logouttt')
+logoutButtonnn.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      alert("Successfully Logged Out")
+      window.location.assign("signupw.html")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+//sub to auth change
+onAuthStateChanged(auth, (user) => {
+  console.log('user status changed:', user)
+})
+
 async function load() {
   let params = new URL(document.location.href).searchParams;
   const area = params.get("area").toUpperCase();
@@ -103,29 +132,3 @@ async function load() {
   })
 }
   window.onload = load; 
-
-//Signing out
-const logoutButton = document.querySelector('.logout')
-logoutButton.addEventListener('click', () => {
-  signOut(auth)
-    .then(() => {
-      alert("Successfully Logged Out")
-      window.location.assign("login.html")
-    })
-    .catch((err) => {
-      console.log(err.message)
-    })
-})
-
-//Signing out2
-const logoutButtonn = document.querySelector('.logoutt')
-logoutButtonn.addEventListener('click', () => {
-  signOut(auth)
-    .then(() => {
-      alert("Successfully Logged Out")
-      window.location.assign("login.html")
-    })
-    .catch((err) => {
-      console.log(err.message)
-    })
-})

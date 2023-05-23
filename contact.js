@@ -27,12 +27,10 @@ menuItems.forEach(
 
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
-  query, where, orderBy, serverTimestamp, getDoc, updateDoc
+  getFirestore
 } from 'firebase/firestore'
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, 
-  signInWithEmailAndPassword, onAuthStateChanged
+  getAuth, signOut, onAuthStateChanged
 } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -51,28 +49,33 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 const auth = getAuth()
 
-//digning out
+//Signing out
 const logoutButton = document.querySelector('.logout')
 logoutButton.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       alert("Successfully Logged Out")
-      window.location.assign("login.html")
+      window.location.assign("signup.html")
     })
     .catch((err) => {
       console.log(err.message)
     })
 })
 
-//Signing out2
-const logoutButtonn = document.querySelector('.logoutt')
-logoutButtonn.addEventListener('click', () => {
+//Signing out3
+const logoutButtonnn = document.querySelector('.logouttt')
+logoutButtonnn.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       alert("Successfully Logged Out")
-      window.location.assign("login.html")
+      window.location.assign("signupw.html")
     })
     .catch((err) => {
       console.log(err.message)
     })
+})
+
+//sub to auth change
+onAuthStateChanged(auth, (user) => {
+  console.log('user status changed:', user)
 })

@@ -26,10 +26,6 @@
         <li>
             <button class="logout">Log Out</button>
         </li>
-        <li class="logg">
-            <button class="logoutt">LogIn</button>
-        </li>
-        <li class="line"><strong>----------------------</strong></li>
         <li>
             <button class="logouttt"><strong>SignUp as a Employee</strong></button>
         </li>
@@ -44,13 +40,15 @@
         <div class="icon">
             <h2 class="logo">Connexa</h2>
         </div>
-        <div class="dropdown">
-                <form id="search-form" class="search">
-                    <input class="srch" type="srch" id="srch" placeholder="Type to search" required>
-                    <a id="search"> <button class="btn">Search</button></a>
-                </form>
-            </div>
-        </div>
+        <form class="search" id="search-form">
+            <select class="srch" id="srch" placeholder="Type to search" required>
+                <option value="">No Selection</option>
+                <option value="KANJIRAPALLY">Kanjirapally</option>
+                <option value="ERUMELY">Erumely</option>
+                <option value="KOOVAPALLY">Koovapally</option>
+            </select>
+            <a id="search"><button class="btn">Search</button></a>
+        </form>
     </div>
     <div class="container">
         <h1>CHOOSE YOUR SERVICE</h1>

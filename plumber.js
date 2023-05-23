@@ -27,12 +27,10 @@ menuItems.forEach(
 
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
-  query, where, orderBy, serverTimestamp, getDocs, updateDoc, getDoc
+  getFirestore, collection, query, where, getDocs
 } from 'firebase/firestore'
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, 
-  signInWithEmailAndPassword, onAuthStateChanged
+  getAuth, signOut, onAuthStateChanged
 } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -54,25 +52,70 @@ const auth = getAuth()
 const workerComponent = (worker) => {
     const star = '<i class="fa-solid fa-star"></i>'        
     const unfilledStar = '<i class="fa-regular fa-star"></i>'
+    const ciRcle = '<i class="fa-solid fa-circle"></i>'
+    const unfilledciRcle ='<i class="fa-regular fa-circle"></i>'
     let stars = '';
     let unfilledStars = ''
     for(let i = 0; i < worker.review; i++) stars += star;
     for(let i = 5; i > worker.review; i--) unfilledStars += unfilledStar
+    
+    let circle  = '';
+    let unfilledcircle = '';
+    if(worker.avail == true)
+    {
+      circle = ciRcle;
+    }
+    else
+    {
+      unfilledcircle = unfilledciRcle;
+    }
     return `
+
     <div class="column">
         <div class="testimonial">
             <div class="name">${worker.name}</div>
             <div class="phno">${worker.phoneno}</div>
-            <div class="phno"></div>
             <div class="stars">
                 ${stars}${unfilledStars}
             </div>
             <p>
                 ${worker?.description ?? ""}
             </p>
+            <div class="avail">${circle}${unfilledcircle}</div>
         </div>
     </div>`
 }
+
+//Signing out
+const logoutButton = document.querySelector('.logout')
+logoutButton.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      alert("Successfully Logged Out")
+      window.location.assign("signup.html")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+//Signing out3
+const logoutButtonnn = document.querySelector('.logouttt')
+logoutButtonnn.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      alert("Successfully Logged Out")
+      window.location.assign("signupw.html")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+//sub to auth change
+onAuthStateChanged(auth, (user) => {
+  console.log('user status changed:', user)
+})
 
 async function load() {
   let params = new URL(document.location.href).searchParams;
@@ -88,30 +131,4 @@ async function load() {
     if(worker.exists())workersContainer.innerHTML += workerComponent(worker.data());
   })
 }
-  window.onload = load; 
-
-//Signing out
-const logoutButton = document.querySelector('.logout')
-logoutButton.addEventListener('click', () => {
-  signOut(auth)
-    .then(() => {
-      alert("Successfully Logged Out")
-      window.location.assign("login.html")
-    })
-    .catch((err) => {
-      console.log(err.message)
-    })
-})
-
-//Signing out2
-const logoutButtonn = document.querySelector('.logoutt')
-logoutButtonn.addEventListener('click', () => {
-  signOut(auth)
-    .then(() => {
-      alert("Successfully Logged Out")
-      window.location.assign("login.html")
-    })
-    .catch((err) => {
-      console.log(err.message)
-    })
-})
+  window.onload = load;
