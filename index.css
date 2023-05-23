@@ -1,3 +1,10 @@
+/*.areaa {
+    width: 330px;
+    margin-left: 450px;
+    padding-top: 350px;
+    font-size: 30px;
+}*/
+
 .search {
     width: 330px;
     margin-left: 450px;
@@ -8,7 +15,7 @@
 .srch {
     font-family: "Times New Roman";
     width: 200px;
-    height: 40px;
+    height: 60px;
     background: transparent;
     border: 1px solid orange;
     margin-top: 13px;
@@ -23,7 +30,7 @@
 
 .btn {
     width: 100px;
-    height: 40px;
+    height: 60px;
     background: orange;
     border: 2px solid orange;
     margin-top: 13px;
@@ -262,8 +269,128 @@ button {
     margin-left: 55px;
 }
 
+.logouttt {
+    border: 0px;
+    color: black;
+    background-color: orange;
+    font-size: 25px;
+    margin-left: 1px;
+}
+
 .line {
     color: black;
     font-size: larger;
     margin-left: 20px;
 }
+
+/*new
+.areamenuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.areahamburger {
+    position: fixed;
+    z-index: 100;
+    margin-top: 25px;
+    margin-left: 37%;
+    padding: 5px;
+    background: orange;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.areacloseIcon {
+    background-color: black;
+    color: white;
+}
+
+.areamenu {
+    position: fixed;
+    transform: translateY(100%);
+    transition: transform 0.2s;
+    top: 57%;
+    left: 49%;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: black;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.areashowMenu {
+    transform: translateX(0);
+}*/
+
+
+/*dropdown*/
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+    
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover,
+        .dropbtn:focus {
+            background-color: #3e8e41;
+        }
+    
+        /* The search field */
+        #myInput {
+            box-sizing: border-box;
+            background-image: url('searchicon.png');
+            background-position: 14px 12px;
+            background-repeat: no-repeat;
+            font-size: 16px;
+            padding: 14px 20px 12px 45px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        /* The search field when it gets focus/clicked on */
+        #myInput:focus {
+            outline: 3px solid #ddd;
+        }
+    
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+    
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f6f6f6;
+            min-width: 230px;
+            border: 1px solid #ddd;
+            z-index: 1;
+        }
+    
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+    
+        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+        .show {
+            display: block;
+        }

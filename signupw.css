@@ -1,16 +1,21 @@
 h1 {
     color: white;
 }
+h2 {
+    margin-left: 115px;
+}
+
 body {
     background-image: url(8.png);
     background-size: cover;
-    margin: 0;
     background-position-x: 5%;
     background-position-y: 5%;
+    padding-top: 35px;
     padding: 0;
     font-family: sans-serif;
-    width: 1530px;
+    width: 1525px;
 }
+
 .nav {
     margin-left: 85%;
     margin-top: 1%;
@@ -21,6 +26,7 @@ body {
     height: 35px;
     width: 12.3%;
 }
+
 .right, .left {
     list-style-type: none;
     display: inline-block;
@@ -29,17 +35,20 @@ body {
     margin-top: .1%;
     height: 50%;
 }
+
 .right {
     background-color: black;
     height: 100%;
-    width: 60%;
+    width: 65%;
     border-radius: 27px;
 }
+
 .left {
     height: 100%;
     width: 70%;
     border-radius: 27px;
 }
+
 .right li a {
     text-decoration: none;
     display: block;
@@ -51,6 +60,7 @@ body {
     font-weight: bold;
     color: white !important;
 }
+
 .left li a {
     text-decoration: none;
     display: block;
@@ -60,22 +70,25 @@ body {
     padding: 10px 20px;
     border-radius: 30px;
 }
+
 .right li a:hover {
     background-color: white;
     height: 71%;
-    width: 60%;
+    width: 69%;
     border-radius: 27px;
     text-align: center;
     color: black !important;
 }
+
 .left li a:hover {
     background-color: white;
     height: 48%;
-    width: 64%;
+    width: 69%;
     border-radius: 27px;
     margin-left: -6%;
     text-align: center;
 }
+
 .box {
     background-color: black;
     max-width: 500px;
@@ -85,14 +98,16 @@ body {
     transform: translate(-50%, -50%);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
     display: flex;
     transition: .3s;
 }
+
 .box:hover {
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .5);
     border-radius: 10px;
 }
+
 input[type=text] {
     display: inline-block;
     width: 500px;
@@ -102,6 +117,7 @@ input[type=text] {
     border: .5px solid;
     margin: 10px 0;
 }
+
 input[type=password] {
     display: inline-block;
     width: 500px;
@@ -111,7 +127,8 @@ input[type=password] {
     border: .5px solid;
     margin: 10px 0;
 }
-input[type=submit] {
+
+.sub {
     width: 500px;
     padding: 10px;
     margin: 10px 0;

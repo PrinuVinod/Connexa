@@ -27,12 +27,10 @@ menuItems.forEach(
 
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
-  query, where, orderBy, serverTimestamp, getDoc, updateDoc
+  getFirestore
 } from 'firebase/firestore'
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, 
-  signInWithEmailAndPassword, onAuthStateChanged
+  getAuth, signOut, onAuthStateChanged
 } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -57,7 +55,7 @@ logoutButton.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       alert("Successfully Logged Out")
-      window.location.assign("login.html")
+      window.location.assign("signup.html")
     })
     .catch((err) => {
       console.log(err.message)
@@ -70,12 +68,26 @@ logoutButtonn.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
       alert("Successfully Logged Out")
-      window.location.assign("login.html")
+      window.location.assign("signup.html")
     })
     .catch((err) => {
       console.log(err.message)
     })
 })
+
+//Signing out3
+const logoutButtonnn = document.querySelector('.logouttt')
+logoutButtonnn.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      alert("Successfully Logged Out")
+      window.location.assign("signupw.html")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
 
 const searchbtn = document.querySelector('#search')
 const input = document.querySelector("#srch")
@@ -83,4 +95,67 @@ const searchForm = document.querySelector("#search-form")
 searchForm.addEventListener('submit', (e) => {
   e.preventDefault()
   window.location.href = `http://${window.location.host}/searchpage.html?area=${input.value}`
+})
+
+/*//new
+const areamenu = document.querySelector(".areamenu");
+const areamenuItems = document.querySelectorAll(".areamenuItem");
+const areahamburger= document.querySelector(".areahamburger");
+const areacloseIcon= document.querySelector(".areacloseIcon");
+const areamenuIcon = document.querySelector(".areamenuIcon");
+
+function togggleMenu() {
+  if (areamenu.classList.contains("areashowMenu")) {
+    areamenu.classList.remove("areashowMenu");
+    areacloseIcon.style.display = "none";
+    areamenuIcon.style.display = "block";
+  } else {
+    areamenu.classList.add("areashowMenu");
+    areacloseIcon.style.display = "block";
+    areamenuIcon.style.display = "none";
+  }
+}
+
+areahamburger.addEventListener("click", togggleMenu);
+
+areamenuItems.forEach( 
+  function(areamenuItem) { 
+    areamenuItem.addEventListener("click", togggleMenu);
+  }
+)
+
+const searchbtn = document.querySelector('#area')
+const input = document.querySelector("#area")
+const searchForm = document.querySelector("#search")
+input.addEventListener('submit', (e) => {
+e.preventDefault()
+window.location.href = `http://${window.location.host}/searchpage.html?area=${input.value}`
+})*/
+
+//filter
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+
+//sub to auth change
+onAuthStateChanged(auth, (user) => {
+  console.log('user status changed:', user)
 })

@@ -1,45 +1,43 @@
 h1 {
     color: white;
 }
-body {
-    background-image: url(8.png);
-    background-size: cover;
-    background-position-x: 5%;
-    background-position-y: 5%;
-    padding-top: 35px;
-    padding: 0;
-    font-family: sans-serif;
-    width: 1525px;
+h2 {
+    margin-left: 120px;
 }
+
 .nav {
-    margin-left: 85%;
+    margin-left: 83%;
     margin-top: 1%;
     border-radius: 20px;
     display: flex;
     justify-content: end;
     background-color: orange;
-    height: 37px;
-    width: 12.7%;
+    height: 35px;
+    width: 15%;
 }
+
 .right, .left {
     list-style-type: none;
-    display: inline-block;
     padding-left: 0%;
     white-space: normal;
     margin-top: .5%;
     height: 50%;
 }
+
 .right {
     height: 100%;
     width: 50%;
     border-radius: 27px;
 }
+
 .left {
     background-color: black;
+    margin-left: 20px;
     height: 95%;
-    width: 57%;
+    width: 150px;
     border-radius: 27px;
 }
+
 .right li a {
     text-decoration: none;
     display: block;
@@ -50,6 +48,7 @@ body {
     border-radius: 30px;
     padding-left: 34%;
 }
+
 .left li a {
     text-decoration: none;
     display: block;
@@ -61,21 +60,35 @@ body {
     font-weight: bold;
     color: white !important;
 }
+
 .right li a:hover {
     background-color: white;
-    height: 50%;
-    width: 47%;
+    margin-top: -0.5px;
+    height: 55%;
+    width: 70%;
     border-radius: 27px;
 }
+
 .left li a:hover {
     background-color: white;
-    height: 67%;
-    width: 74%;
+    height: 75%;
+    width: 75%;
     border-radius: 30px;
     text-align: center;
     color: black !important;
     margin-bottom: 100%;
 }
+body {
+    background-image: url(8.png);
+    background-size: cover;
+    background-position-x: 5%;
+    background-position-y: 5%;
+    padding-top: 35px;
+    padding: 0;
+    font-family: sans-serif;
+    width: 1525px;
+}
+
 .box {
     background-color: black;
     max-width: 500px;
@@ -111,7 +124,7 @@ input[type=password] {
     border: .5px solid;
     margin: 10px 0;
 }
-input[type=submit] {
+.sub {
     width: 500px;
     padding: 10px;
     margin: 10px 0;

@@ -78,9 +78,22 @@ h1 {
     margin: 20px 0;
 }
 
+.avail{
+    position: relative;
+    right: 160px;
+}
+
 .stars{
     color: orange;
     margin-bottom: 20px;
+}
+
+.circle{
+    color: greenyellow !important;
+}
+
+.unfilledcircle:hover{
+    color: white!important;
 }
 
 

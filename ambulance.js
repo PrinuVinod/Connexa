@@ -54,22 +54,36 @@ const auth = getAuth()
 const workerComponent = (worker) => {
     const star = '<i class="fa-solid fa-star"></i>'        
     const unfilledStar = '<i class="fa-regular fa-star"></i>'
+    const ciRcle = '<i class="fa-solid fa-circle"></i>'
+    const unfilledciRcle ='<i class="fa-regular fa-circle"></i>'
     let stars = '';
     let unfilledStars = ''
     for(let i = 0; i < worker.review; i++) stars += star;
     for(let i = 5; i > worker.review; i--) unfilledStars += unfilledStar
+    
+    let circle  = '';
+    let unfilledcircle = '';
+    if(worker.avail == true)
+    {
+      circle = ciRcle;
+    }
+    else
+    {
+      unfilledcircle = unfilledciRcle;
+    }
     return `
+
     <div class="column">
         <div class="testimonial">
             <div class="name">${worker.name}</div>
             <div class="phno">${worker.phoneno}</div>
-            <div class="phno"></div>
             <div class="stars">
                 ${stars}${unfilledStars}
             </div>
             <p>
                 ${worker?.description ?? ""}
             </p>
+            <div class="avail">${circle}${unfilledcircle}</div>
         </div>
     </div>`
 }
