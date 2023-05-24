@@ -26,7 +26,7 @@ export default defineConfig({
             mechanic: resolve(__dirname, "mechanic.html"),
             painter: resolve(__dirname, "painter.html"),
             plumber: resolve(__dirname, "plumber.html"),
-            rubber: resolve(__dirname, ".rubber.html"),
+            rubber: resolve(__dirname, "rubber.html"),
             wood: resolve(__dirname, "wood.html"),
             worker: resolve(__dirname, "worker.html"),
             details: resolve(__dirname, "details.html"),
