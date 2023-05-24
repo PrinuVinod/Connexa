@@ -27,9 +27,12 @@ const auth = getAuth()
 
 const workerComponent = (worker) => {
   return `<div class="details">
-            <div class="name">${worker.name}</div>
-            <div class="phno">${worker.phoneno}</div>
-            <p>${worker?.description ?? ""}</p>
+            <div class="name"><font color=orange>Name: </font>${worker.name}</div>
+            <div class="phno"><font color=orange>Phone Number: </font>${worker.phoneno}</div>
+            <div class="phno"><font color=orange>Area: </font>${worker.area}</div>
+            <div class="phno"><font color=orange>Field: </font>${worker.field}</div>
+            <div class="avail"><font color=orange>Availability Status: </font>${worker.avail}</div>
+            <p class="desc"><font color=orange>Minimum Wages: </font>${worker?.description ?? ""}</p>
     </div>`
 }
 
