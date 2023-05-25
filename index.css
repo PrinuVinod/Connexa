@@ -1,10 +1,3 @@
-/*.areaa {
-    width: 330px;
-    margin-left: 450px;
-    padding-top: 350px;
-    font-size: 30px;
-}*/
-
 .search {
     width: 330px;
     margin-left: 450px;
@@ -126,8 +119,8 @@ body {
     position: fixed;
     top: 0;
     left: -250px;
-    width: 185px;
-    height: 770px;
+    width: 15vw;
+    height: 100vh;
     background-color: orange;
     transition: left 0.3s ease-in;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;

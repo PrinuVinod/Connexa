@@ -13,18 +13,22 @@ body {
     padding-top: 35px;
     padding: 0;
     font-family: sans-serif;
-    width: 1525px;
 }
 
-.nav {
-    margin-left: 85%;
-    margin-top: 1%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: end;
-    background-color: orange;
+.blah1 {
     height: 35px;
-    width: 12.3%;
+    width: 100vw;
+    float: right;
+    padding-right: 25px;
+}
+
+
+.blah2 {
+    background-color: orange;
+    height: 36px;
+    display: flex;
+    border-radius: 20px;
+    float: right;
 }
 
 .right, .left {
@@ -73,8 +77,8 @@ body {
 
 .right li a:hover {
     background-color: white;
-    height: 71%;
-    width: 69%;
+    height: 75%;
+    width: 71%;
     border-radius: 27px;
     text-align: center;
     color: black !important;

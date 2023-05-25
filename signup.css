@@ -5,15 +5,20 @@ h2 {
     margin-left: 120px;
 }
 
-.nav {
-    margin-left: 83%;
-    margin-top: 1%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: end;
-    background-color: orange;
+.blah1 {
     height: 35px;
-    width: 15%;
+    width: 100vw;
+    float: right;
+    padding-right: 25px;
+}
+
+
+.blah2 {
+    background-color: orange;
+    height: 36px;
+    display: flex;
+    border-radius: 20px;
+    float: right;
 }
 
 .right, .left {
@@ -71,8 +76,8 @@ h2 {
 
 .left li a:hover {
     background-color: white;
-    height: 75%;
-    width: 75%;
+    height: 80%;
+    width: 77%;
     border-radius: 30px;
     text-align: center;
     color: black !important;
@@ -86,7 +91,8 @@ body {
     padding-top: 35px;
     padding: 0;
     font-family: sans-serif;
-    width: 1525px;
+    overflow-x: hidden;
+    object-fit: cover;
 }
 
 .box {
