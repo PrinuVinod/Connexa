@@ -56,3 +56,160 @@ input[type=checkbox] {
     width: 20px;
     height: 30px;
 }
+
+/*new*/
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 13vw;
+    height: 100vh;
+    background-color: orange;
+    transition: left 0.3s ease-in;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul li {
+    list-style: none;
+    margin-top: 20px;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13vw;
+}
+
+ul li a {
+    text-decoration: none;
+    color: orange;
+    font-family: Arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menuItem {
+    display: block;
+    margin: 2rem 4rem;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+}
+
+.menuItem:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    position: fixed;
+    z-index: 100;
+    top: 1rem;
+    right: 1rem;
+    padding: 4px;
+    border: black solid 1px;
+    background: white;
+    cursor: pointer;
+}
+
+.closeIcon {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: orange;
+    color: black;
+    list-style: none;
+    padding-top: 4rem;
+}
+
+.showMenu {
+    transform: translateY(0);
+}
+
+a,
+button {
+    cursor: pointer;
+}
+
+.hamburger,
+.bar {
+    position: fixed;
+}
+
+.hamburger {
+    display: block;
+    top: 5%;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    transform: translateY(-50%);
+    border: 0;
+    background: 0 0;
+}
+
+.bar {
+    top: 3px;
+    background: white;
+    width: 20px;
+    height: 4px;
+    transition: all .3s ease-in;
+}
+
+#bar2 {
+    top: 11px;
+}
+
+#bar3 {
+    top: 19px;
+}
+
+/*menu*/
+.hm {
+    margin-left: 55px;
+    font-size: medium;
+}
+
+.abt {
+    margin-left: 53px;
+    font-size: medium;
+}
+
+.cont {
+    margin-left: 35px;
+    font-size: medium;
+    margin-left: 45px;
+}
+
+.logout {
+    border: 0px;
+    color: white;
+    background-color: orange;
+    font-size: 25px;
+    margin-left: 35px;
+}
+
+.logouttt {
+    border: 0px;
+    color: black;
+    background: transparent;
+    font-size: 25px;
+    margin-left: 1px;
+}
+
+.line {
+    color: black;
+    font-size: larger;
+    margin-left: 10px;
+}

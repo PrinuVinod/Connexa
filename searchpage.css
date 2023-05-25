@@ -118,6 +118,7 @@ body{
     font-family: Arial;
     float: left;
     padding-top: 10px;
+    margin-left: 30%;
 }
 
 .search {
@@ -233,8 +234,8 @@ p {
     position: fixed;
     top: 0;
     left: -250px;
-    width: 185px;
-    height: 770px;
+    width: 13vw;
+    height: 100vh;
     background-color: orange;
     transition: left 0.3s ease-in;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -244,6 +245,9 @@ ul li {
     list-style: none;
     margin-top: 20px;
     font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 13vw;
 }
 
 ul li a {
@@ -345,19 +349,19 @@ button {
 
 /*menu*/
 .hm {
-    margin-left: 60px;
-    font-size: medium;
-}
-
-.abt {
     margin-left: 55px;
     font-size: medium;
 }
 
-.cont {
-    margin-left: 45px;
+.abt {
+    margin-left: 53px;
     font-size: medium;
-    margin-left: 50px;
+}
+
+.cont {
+    margin-left: 35px;
+    font-size: medium;
+    margin-left: 45px;
 }
 
 .logout {
@@ -365,21 +369,13 @@ button {
     color: white;
     background-color: orange;
     font-size: 25px;
-    margin-left: 45px;
-}
-
-.logoutt {
-    border: 0px;
-    color: white;
-    background-color: orange;
-    font-size: 25px;
-    margin-left: 55px;
+    margin-left: 35px;
 }
 
 .logouttt {
     border: 0px;
     color: black;
-    background-color: orange;
+    background: transparent;
     font-size: 25px;
     margin-left: 1px;
 }
@@ -387,5 +383,5 @@ button {
 .line {
     color: black;
     font-size: larger;
-    margin-left: 20px;
+    margin-left: 10px;
 }
