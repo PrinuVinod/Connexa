@@ -1,3 +1,30 @@
+// JavaScript code to toggle menu when hamburger button is clicked
+const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
+
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
+
 import { initializeApp } from 'firebase/app'
 import {
   getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
@@ -55,6 +82,48 @@ onAuthStateChanged(auth, (user) => {
   }
 })
 
+//Signing out
+const logoutButton = document.querySelector('.logout')
+logoutButton.addEventListener('click', () => {
+  signOut(auth)
+    .then(() => {
+      alert("Successfully Logged Out")
+      window.location.assign("signup.html")
+    })
+    .catch((err) => {
+      console.log(err.message)
+    })
+})
+
+// deleting docs
+const deleteForm = document.querySelector('.delete')
+deleteForm.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const docRef = doc(db, 'workers', auth.currentUser.uid)
+
+  deleteDoc(docRef)
+    .then(() => {
+      deleteForm.reset()
+      alert("Deleted Successfully")
+      window.location.assign("worker.html")
+    })
+})
+
+// updating docs
+const deleteFormm = document.querySelector('.update')
+deleteFormm.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  const docRef = doc(db, 'workers', auth.currentUser.uid)
+
+  deleteDoc(docRef)
+    .then(() => {
+      deleteForm.reset()
+      window.location.assign("update.html")
+    })
+})
+
 document.querySelector("#availability").addEventListener("change", async e => {
   if(e.target.disabled) return;
   const avail = e.target.checked;
@@ -63,7 +132,7 @@ document.querySelector("#availability").addEventListener("change", async e => {
     await updateDoc(doc(db, "workers", auth.currentUser.uid), {
       avail
     });
-    window.alert("Availability Status Updated")
+    window.alert("Availability Status Updated.")
   } catch(err) {
     console.error(err);
     window.alert("Couldn't update availability status.");

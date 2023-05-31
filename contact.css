@@ -34,7 +34,7 @@ a {
     position: fixed;
     top: 0;
     left: -250px;
-    width: 13vw;
+    width: 170px;
     height: 100vh;
     background-color: orange;
     transition: left 0.3s ease-in;
@@ -92,8 +92,7 @@ ul li a {
 }
 
 .menu {
-    position: fixed;
-    transform: translateX(-100%);
+    transform: translateX(-101%);
     transition: transform 0.2s;
     top: 0;
     left: 0;
@@ -169,7 +168,7 @@ button {
     color: white;
     background-color: orange;
     font-size: 25px;
-    margin-left: 35px;
+    margin-left: 37px;
 }
 
 .logouttt {
@@ -177,7 +176,7 @@ button {
     color: black;
     background: transparent;
     font-size: 25px;
-    margin-left: 1px;
+    margin-right: 35px;
 }
 
 .line {

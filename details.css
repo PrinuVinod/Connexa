@@ -62,7 +62,7 @@ input[type=checkbox] {
     position: fixed;
     top: 0;
     left: -250px;
-    width: 13vw;
+    width: 170px;
     height: 100vh;
     background-color: orange;
     transition: left 0.3s ease-in;
@@ -120,8 +120,7 @@ ul li a {
 }
 
 .menu {
-    position: fixed;
-    transform: translateX(-100%);
+    transform: translateX(-101%);
     transition: transform 0.2s;
     top: 0;
     left: 0;
@@ -161,7 +160,7 @@ button {
 
 .bar {
     top: 3px;
-    background: white;
+    background: black;
     width: 20px;
     height: 4px;
     transition: all .3s ease-in;
@@ -176,40 +175,30 @@ button {
 }
 
 /*menu*/
-.hm {
-    margin-left: 55px;
-    font-size: medium;
-}
-
-.abt {
-    margin-left: 53px;
-    font-size: medium;
-}
-
-.cont {
-    margin-left: 35px;
-    font-size: medium;
-    margin-left: 45px;
-}
-
 .logout {
     border: 0px;
     color: white;
     background-color: orange;
     font-size: 25px;
-    margin-left: 35px;
+    margin-left: 37px;
 }
 
-.logouttt {
-    border: 0px;
-    color: black;
-    background: transparent;
-    font-size: 25px;
-    margin-left: 1px;
+.dlt {
+    margin-left: 26%;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.upd {
+    margin-left: 25%;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
 }
 
 .line {
     color: black;
     font-size: larger;
-    margin-left: 10px;
+    margin-left: 12px;
 }

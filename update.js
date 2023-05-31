@@ -55,6 +55,6 @@ adddetailForm.addEventListener('submit', (e) => {
   })
   .then(() => {
     alert("Added Successfull")
-    window.location.assign("update.html")
+    window.location.assign("details.html")
   })
 })
