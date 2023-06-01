@@ -1,11 +1,9 @@
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
-  query, where, orderBy, serverTimestamp, getDoc, updateDoc, snapshotEqual, getDocs, setDoc
+  getFirestore, collection, doc, getDoc, setDoc
 } from 'firebase/firestore'
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, 
-  signInWithEmailAndPassword, onAuthStateChanged
+  getAuth, onAuthStateChanged
 } from 'firebase/auth'
 
 const firebaseConfig = {

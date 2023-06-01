@@ -1,12 +1,9 @@
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
-  query, where, orderBy, serverTimestamp, getDoc, updateDoc
+  getFirestore
 } from 'firebase/firestore'
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, 
-  signInWithEmailAndPassword, onAuthStateChanged, 
-  GoogleAuthProvider, signInWithPopup, getRedirectResult
+  getAuth, onAuthStateChanged, GoogleAuthProvider, signInWithPopup
 } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -25,24 +22,6 @@ initializeApp(firebaseConfig)
 const db = getFirestore()
 const auth = getAuth()
 const provider = new GoogleAuthProvider()
-
-/*signing users up
-const signupForm = document.querySelector('.signup')
-signupForm.addEventListener('submit', (e) => {
-  e.preventDefault()
-
-  const email = signupForm.email.value
-  const password = signupForm.password.value
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((cred) => {
-      console.log('user created:', cred.user)
-      alert("SignUp Successfull")
-      window.location.assign("index.html")
-    })
-    .catch((err) => {
-      alert(err.message)
-    })
-})*/
 
 //sub to auth change
 onAuthStateChanged(auth, (user) => {

@@ -30,6 +30,7 @@ export default defineConfig({
             wood: resolve(__dirname, "wood.html"),
             worker: resolve(__dirname, "worker.html"),
             details: resolve(__dirname, "details.html"),
+            details: resolve(__dirname, "update.html"),
          },
       },
    },

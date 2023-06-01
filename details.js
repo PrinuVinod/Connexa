@@ -27,13 +27,10 @@ menuItems.forEach(
 
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
-  query, where, orderBy, serverTimestamp, getDocs, updateDoc, getDoc
+  getFirestore, deleteDoc, doc, updateDoc, getDoc
 } from 'firebase/firestore'
 import {
-  getAuth, createUserWithEmailAndPassword, signOut, 
-  signInWithEmailAndPassword, onAuthStateChanged, 
-  GoogleAuthProvider, signInWithPopup, getRedirectResult
+  getAuth, signOut, onAuthStateChanged
 } from 'firebase/auth'
 
 const firebaseConfig = {

@@ -15,8 +15,9 @@
 
                 <label for="author" id="area" class="area"><font color=white>Area:</font></label>
                 <input type="text" name="area" required>
-                <!-- <form class="search" id="search-form">
-                    <select class="srch" id="srch" placeholder="Type to search" required>
+                <!-- <form id="myForm">
+                    <label for="option">Option:</label>
+                    <select id="option" name="option">
                         <option value="">No Selection</option>
                         <option value="ERUMELY">Erumely</option>
                         <option value="KANJIRAPALLY">Kanjirapally</option>
@@ -32,7 +33,7 @@
 
                 <label for="author" id="field"><font color=white>Field:</font></label>
                 <input type="text" name="field" required>
-                <!-- <form class="search" id="search-form">
+                <!-- <form type="text" name="field" class="search" id="search-form">
                     <select class="srch" id="srch" placeholder="Type to search" required>
                         <option value="">No Selection</option>
                         <option value="AMBULANCE">Ambulance</option>
@@ -53,10 +54,12 @@
                     </select>
                 </form> -->
                 
-                <a id="search"><button class="btn" id="btn">Submit</button></a>
+                <button type="submit" class="btn" id="btn">Submit</button>
             </form>
         </div>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
     <script type="module" src="worker.js"></script>
 </body>
 </html>
