@@ -384,3 +384,10 @@ button {
     font-size: larger;
     margin-left: 10px;
 }
+
+option {
+    background-color: white;
+    color: black;
+    border-color: white;
+    font-size: 25px;
+}

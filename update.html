@@ -3,17 +3,17 @@
 
 <head>
     <title>Details</title>
-    <link rel="stylesheet" href="update.css">
+    <link rel="stylesheet" href="worker.css">
 </head>
 
 <body>
     <h1 class="wlcm">
-        <font color=black>Update Your Profile</font>
+        <font color=black>Update your Profile:</font>
     </h1>
     <div class="box">
         <div class="content">
             <h1 class="details">Enter Your Details:</h1>
-            <form class="add">
+            <form class="add" id="add-form">
                 <label for="title">
                     <font color=white>Name:</font>
                 </label>
@@ -22,56 +22,54 @@
                 <label for="author" id="area" class="area">
                     <font color=white>Area:</font>
                 </label>
-                <input type="text" name="area" required>
-                <!-- <form class="search" id="search-form">
-                    <select class="srch" id="srch" placeholder="Type to search" required>
-                        <option value="">No Selection</option>
-                        <option value="ERUMELY">Erumely</option>
-                        <option value="KANJIRAPALLY">Kanjirapally</option>
-                        <option value="KOOVAPALLY">Koovapally</option>
-                    </select>
-                </form> -->
-
-                <label for="author">
+                <!-- <input type="text" name="area" required> -->
+                <label for="option">Option:</label>
+                <select class="option" id="option" name="area">
+                    <option value="">No Selection</option>
+                    <option value="ERUMELY">Erumely</option>
+                    <option value="KANJIRAPALLY">Kanjirapally</option>
+                    <option value="KOOVAPALLY">Koovapally</option>
+                </select><br>
+                <label class="phono" for="author">
                     <font color=white>Phone Number:</font>
                 </label>
                 <input type="text" name="phoneno" required>
 
                 <label for="author">
-                    <font color=white>Description:</font>
+                    <font color=white>Minimum Wages:</font>
                 </label>
                 <input type="text" name="description" required>
 
                 <label for="author" id="field">
                     <font color=white>Field:</font>
                 </label>
-                <input type="text" name="field" required>
-                <!-- <form class="search" id="search-form">
-                    <select class="srch" id="srch" placeholder="Type to search" required>
-                        <option value="">No Selection</option>
-                        <option value="AMBULANCE">Ambulance</option>
-                        <option value="BRICK LAYER">Brick Layer</option>
-                        <option value="CARPENTER">Carpenter</option>
-                        <option value="COCONUT PLUCKER">Coconut Plucker</option>
-                        <option value="DRIVER">Driver</option>
-                        <option value="ELECTRICIAN">Electrician</option>
-                        <option value="GARDENER">Gardener</option>
-                        <option value="HOSPITAL">Hospital</option>
-                        <option value="MAID">Maid</option>
-                        <option value="MASON">Mason</option>
-                        <option value="MECHANIC">Mechanic</option>
-                        <option value="PAINTER">Painter</option>
-                        <option value="PLUMBER">Plumber</option>
-                        <option value="RUBBER TAPPER">Rubber Tapper</option>
-                        <option value="WOOD CUTTER">Wood Cutter</option>
-                    </select>
-                </form> -->
+                <!-- <input type="text" name="field" required> -->
+                <select class="srch" id="srch" name="field" placeholder="Type to search" required>
+                    <option value="">No Selection</option>
+                    <option value="AMBULANCE">Ambulance</option>
+                    <option value="BRICK LAYER">Brick Layer</option>
+                    <option value="CARPENTER">Carpenter</option>
+                    <option value="COCONUT PLUCKER">Coconut Plucker</option>
+                    <option value="DRIVER">Driver</option>
+                    <option value="ELECTRICIAN">Electrician</option>
+                    <option value="GARDENER">Gardener</option>
+                    <option value="HOSPITAL">Hospital</option>
+                    <option value="MAID">Maid</option>
+                    <option value="MASON">Mason</option>
+                    <option value="MECHANIC">Mechanic</option>
+                    <option value="PAINTER">Painter</option>
+                    <option value="PLUMBER">Plumber</option>
+                    <option value="RUBBER TAPPER">Rubber Tapper</option>
+                    <option value="WOOD CUTTER">Wood Cutter</option>
+                </select>
 
-                <a id="search"><button class="btn" id="btn">Submit</button></a>
+                <button type="submit" class="btn" id="btn">Submit</button>
             </form>
         </div>
     </div>
-    <script type="module" src="update.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script type="module" src="worker.js"></script>
 </body>
 
 </html>

@@ -96,6 +96,7 @@ logoutButton.addEventListener('click', () => {
 const deleteForm = document.querySelector('.delete')
 deleteForm.addEventListener('submit', (e) => {
   e.preventDefault()
+  if(!window.confirm("Do you want to delete your profile?")) return;
 
   const docRef = doc(db, 'workers', auth.currentUser.uid)
 
@@ -111,6 +112,7 @@ deleteForm.addEventListener('submit', (e) => {
 const deleteFormm = document.querySelector('.update')
 deleteFormm.addEventListener('submit', (e) => {
   e.preventDefault()
+  if(!window.confirm("Do you want to Update your profile?")) return;
 
   const docRef = doc(db, 'workers', auth.currentUser.uid)
 

@@ -63,8 +63,11 @@ h1 {
 .testimonial:hover{
     transform: translateY(-10px);
     transition: all ease 0.3s;
-    background-color: #dbdbdb;
+    background-color: orange;
     color: black;
+    .stars{
+        color: white;
+    }
 }
 
 .name{
@@ -85,7 +88,7 @@ h1 {
 }
 
 .stars{
-    color: orange;
+    color: orange   ;
     margin-bottom: 20px;
 }
 
@@ -259,4 +262,10 @@ button {
     color: black;
     font-size: larger;
     margin-left: 10px;
+}
+
+option {
+    color: orange;
+    background-color: black;
+    border-color: black;
 }

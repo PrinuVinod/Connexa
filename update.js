@@ -1,9 +1,11 @@
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, doc, getDoc, setDoc
+  getFirestore, collection, onSnapshot, addDoc, deleteDoc, doc,
+  query, where, orderBy, serverTimestamp, getDoc, updateDoc, snapshotEqual, getDocs, setDoc
 } from 'firebase/firestore'
 import {
-  getAuth, onAuthStateChanged
+  getAuth, createUserWithEmailAndPassword, signOut, 
+  signInWithEmailAndPassword, onAuthStateChanged
 } from 'firebase/auth'
 
 const firebaseConfig = {
@@ -39,20 +41,22 @@ onAuthStateChanged(auth, (user) => {
 })
 
 //add to db
-const adddetailForm = document.querySelector('.add')
+const adddetail = document.querySelector('#add-form')
 const area = document.querySelector("#srch")
-adddetailForm.addEventListener('submit', (e) => {
+adddetail.addEventListener('submit', (e) => {
+  const addDetailForm = new FormData(document.querySelector('#add-form'))
   e.preventDefault()
   const workerRef = doc(db, "workers", auth.currentUser.uid);
-  setDoc(workerRef, {
-    name: adddetailForm.name.value,
-    phoneno: adddetailForm.phoneno.value,
-    area: adddetailForm.area.value.toUpperCase(),
-    field: adddetailForm.field.value.toUpperCase(),
-    description: adddetailForm.description.value,
-  })
+  const data = {
+    name: addDetailForm.get("name"),
+    phoneno: addDetailForm.get("phoneno"),
+    area: addDetailForm.get("area"),
+    field: addDetailForm.get("field"),
+    description: addDetailForm.get("description"),
+  }
+  setDoc(workerRef, data)
   .then(() => {
-    alert("Added Successfull")
+    alert("Updated Successfull")
     window.location.assign("details.html")
   })
 })

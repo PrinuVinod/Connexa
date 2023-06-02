@@ -27,7 +27,7 @@ menuItems.forEach(
 
 import { initializeApp } from 'firebase/app'
 import {
-  getFirestore, collection, query, where, getDocs
+  getFirestore, collection, query, where, getDocs, updateDoc, doc
 } from 'firebase/firestore'
 import {
   getAuth, signOut, onAuthStateChanged
@@ -56,8 +56,8 @@ const workerComponent = (worker) => {
     const unfilledciRcle ='<i class="fa-regular fa-circle"></i>'
     let stars = '';
     let unfilledStars = ''
-    for(let i = 0; i < worker.review; i++) stars += star;
-    for(let i = 5; i > worker.review; i--) unfilledStars += unfilledStar
+    for(let i = 0; i < Math.floor(worker.review); i++) stars += star;
+    for(let i = 5; i > Math.floor(worker.review); i--) unfilledStars += unfilledStar
     
     let circle  = '';
     let unfilledcircle = '';
@@ -75,32 +75,23 @@ const workerComponent = (worker) => {
         <div class="testimonial">
             <div class="name">${worker.name}</div>
             <div class="phno">${worker.phoneno}</div>
-            <div class="stars">
-                ${stars}${unfilledStars}
-            </div>
-            <p>
-                ${worker?.description ?? ""}
-            </p>
+            <div class="stars">${stars}${unfilledStars}</div>
+            <p>Minimum Fees: Rs.${worker?.description ?? ""}</p>
             <div class="avail">${circle}${unfilledcircle}</div>
+            <div class="stars">
+               Rate employee:  
+               <select id="${worker.id}">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+               </select>
+            </div>
         </div>
     </div>`
 }
-
-async function load() {
-  let params = new URL(document.location.href).searchParams;
-  const area = params.get("area").toUpperCase();
-  const ref = collection(db, "workers");
-  const workerQuery = query(ref,  where("field", "==", "BRICK LAYER"), where("area", "==", area))
-  const result = await getDocs(workerQuery);
-  console.log(area);
-  if(result.empty) return;
-  const workersContainer = document.querySelector("#workers-container");
-  result.forEach(worker => {
-    console.log("here")
-    if(worker.exists())workersContainer.innerHTML += workerComponent(worker.data());
-  })
-}
-  window.onload = load; 
 
 //Signing out
 const logoutButton = document.querySelector('.logout')
@@ -132,3 +123,28 @@ logoutButtonnn.addEventListener('click', () => {
 onAuthStateChanged(auth, (user) => {
   console.log('user status changed:', user)
 })
+
+async function load() {
+  let params = new URL(document.location.href).searchParams;
+  const area = params.get("area").toUpperCase();
+  const ref = collection(db, "workers");
+  const workerQuery = query(ref,  where("field", "==", "BRICK LAYER"), where("area", "==", area))
+  const result = await getDocs(workerQuery);
+  console.log(area);
+  if(result.empty) return;
+  const workersContainer = document.querySelector("#workers-container");
+  result.forEach(worker => {
+    if(worker.exists())workersContainer.innerHTML += workerComponent({...worker.data(), id: worker.id});
+  })
+  result.forEach(worker => {
+    document.querySelector("#"+worker.id).addEventListener("change", async e => {
+      if(!confirm("Are you sure you want to add review of: " + e.target.value)) return;
+      console.log((worker.data().review + Number.parseInt(e.target.value)) / 2)
+      await updateDoc(doc(db, "workers", worker.id), {
+        review: (worker.data().review + Number.parseInt(e.target.value)) / 2
+      })
+      window.location.reload();
+    })
+  });
+}
+  window.onload = load;

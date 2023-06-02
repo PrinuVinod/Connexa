@@ -9,50 +9,68 @@
     <div class="box">
         <div class="content">
             <h1 class="details">Enter Your Details:</h1>
-            <form class="add">
+            <form class="add" id="add-form">
                 <label for="title"><font color=white>Name:</font></label>
                 <input type="text" name="name" required>
 
                 <label for="author" id="area" class="area"><font color=white>Area:</font></label>
-                <input type="text" name="area" required>
-                <!-- <form id="myForm">
-                    <label for="option">Option:</label>
-                    <select id="option" name="option">
-                        <option value="">No Selection</option>
-                        <option value="ERUMELY">Erumely</option>
-                        <option value="KANJIRAPALLY">Kanjirapally</option>
-                        <option value="KOOVAPALLY">Koovapally</option>
-                    </select>
-                </form> -->
+                <!-- <input type="text" name="area" required> -->
+                <label for="option">Option:</label>
+                <select class="option" id="option" name="area">
+                    <option value="">No Selection</option>
+                    <option value="ERUMELY">Erumely</option>
+                    <option value="KANJIRAPALLY">Kanjirapally</option>
+                    <option value="KOOVAPALLY">Koovapally</option>
+                </select><br>
 
-                <label for="author"><font color=white>Phone Number:</font></label>
+                <label class="phono" for="author"><font color=white>Phone Number:</font></label>
                 <input type="text" name="phoneno" required>
 
-                <label for="author"><font color=white>Description:</font></label>
-                <input type="text" name="description" required>
+                <label for="author"><font color=white>Minimum Wages:</font></label>
+                <!-- <input type="text" name="description" required> -->
+                <label for="option">Option:</label>
+                <select class="option" id="desc" name="desc">
+                    <option value="100">100</option>
+                    <option value="150">150</option>
+                    <option value="200">200</option>
+                    <option value="250">250</option>
+                    <option value="300">300</option>
+                    <option value="350">350</option>
+                    <option value="400">400</option>
+                    <option value="450">450</option>
+                    <option value="500">500</option>
+                    <option value="550">550</option>
+                    <option value="600">600</option>
+                    <option value="650">650</option>
+                    <option value="700">700</option>
+                    <option value="750">750</option>
+                    <option value="800">800</option>
+                    <option value="850">850</option>
+                    <option value="900">900</option>
+                    <option value="950">950</option>
+                    <option value="1000">1000</option>
+                </select><br>
 
                 <label for="author" id="field"><font color=white>Field:</font></label>
-                <input type="text" name="field" required>
-                <!-- <form type="text" name="field" class="search" id="search-form">
-                    <select class="srch" id="srch" placeholder="Type to search" required>
-                        <option value="">No Selection</option>
-                        <option value="AMBULANCE">Ambulance</option>
-                        <option value="BRICK LAYER">Brick Layer</option>
-                        <option value="CARPENTER">Carpenter</option>
-                        <option value="COCONUT PLUCKER">Coconut Plucker</option>
-                        <option value="DRIVER">Driver</option>
-                        <option value="ELECTRICIAN">Electrician</option>
-                        <option value="GARDENER">Gardener</option>
-                        <option value="HOSPITAL">Hospital</option>
-                        <option value="MAID">Maid</option>
-                        <option value="MASON">Mason</option>
-                        <option value="MECHANIC">Mechanic</option>
-                        <option value="PAINTER">Painter</option>
-                        <option value="PLUMBER">Plumber</option>
-                        <option value="RUBBER TAPPER">Rubber Tapper</option>
-                        <option value="WOOD CUTTER">Wood Cutter</option>
-                    </select>
-                </form> -->
+                <!-- <input type="text" name="field" required> -->
+                <select class="srch" id="srch" name="field" placeholder="Type to search" required>
+                    <option value="">No Selection</option>
+                    <option value="AMBULANCE">Ambulance</option>
+                    <option value="BRICK LAYER">Brick Layer</option>
+                    <option value="CARPENTER">Carpenter</option>
+                    <option value="COCONUT PLUCKER">Coconut Plucker</option>
+                    <option value="DRIVER">Driver</option>
+                    <option value="ELECTRICIAN">Electrician</option>
+                    <option value="GARDENER">Gardener</option>
+                    <option value="HOSPITAL">Hospital</option>
+                    <option value="MAID">Maid</option>
+                    <option value="MASON">Mason</option>
+                    <option value="MECHANIC">Mechanic</option>
+                    <option value="PAINTER">Painter</option>
+                    <option value="PLUMBER">Plumber</option>
+                    <option value="RUBBER TAPPER">Rubber Tapper</option>
+                    <option value="WOOD CUTTER">Wood Cutter</option>
+                </select>
                 
                 <button type="submit" class="btn" id="btn">Submit</button>
             </form>
