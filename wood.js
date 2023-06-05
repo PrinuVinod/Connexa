@@ -134,10 +134,10 @@ async function load() {
   if(result.empty) return;
   const workersContainer = document.querySelector("#workers-container");
   result.forEach(worker => {
-    if(worker.exists())workersContainer.innerHTML += workerComponent({...worker.data(), id: worker.id});
+    if(worker.exists())workersContainer.innerHTML += workerComponent({...worker.data(), id: "A"+worker.id});
   })
   result.forEach(worker => {
-    document.querySelector("#"+worker.id).addEventListener("change", async e => {
+    document.querySelector("#A"+worker.id).addEventListener("change", async e => {
       if(!confirm("Are you sure you want to add review of: " + e.target.value)) return;
       console.log((worker.data().review + Number.parseInt(e.target.value)) / 2)
       await updateDoc(doc(db, "workers", worker.id), {
