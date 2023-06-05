@@ -258,15 +258,17 @@ button {
 
 .blah {
     color: greenyellow;
-    margin-top: 300px;
+    /* margin-top: 300px; */
     font-size: larger;
-    margin-left: 35px;
+    margin-left: 90%;
+    list-style: none;
 }
 
 .blah1 {
     color: greenyellow;
     font-size: larger;
-    margin-left: 25px;
+    margin-left: 90%;
+    list-style: none;
 }
 
 option {
