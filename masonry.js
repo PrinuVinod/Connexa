@@ -128,7 +128,7 @@ async function load() {
   let params = new URL(document.location.href).searchParams;
   const area = params.get("area").toUpperCase();
   const ref = collection(db, "workers");
-  const workerQuery = query(ref,  where("field", "==", "MASONRY"), where("area", "==", area))
+  const workerQuery = query(ref,  where("field", "==", "MASON"), where("area", "==", area))
   const result = await getDocs(workerQuery);
   console.log(area);
   if(result.empty) return;
