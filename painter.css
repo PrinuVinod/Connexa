@@ -84,20 +84,12 @@ h1 {
 .avail{
     position: relative;
     right: 160px;
-    color: green;
+    color: greenyellow;
 }
 
 .stars{
     color: orange   ;
     margin-bottom: 20px;
-}
-
-.circle{
-    color: greenyellow !important;
-}
-
-.unfilledcircle:hover{
-    color: white!important;
 }
 
 
@@ -262,6 +254,19 @@ button {
     color: black;
     font-size: larger;
     margin-left: 10px;
+}
+
+.blah {
+    color: greenyellow;
+    margin-top: 300px;
+    font-size: larger;
+    margin-left: 35px;
+}
+
+.blah1 {
+    color: greenyellow;
+    font-size: larger;
+    margin-left: 25px;
 }
 
 option {
