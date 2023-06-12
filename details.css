@@ -202,3 +202,12 @@ button {
     font-size: larger;
     margin-left: 12px;
 }
+
+.upl {
+    margin-left: 27px;
+    font-size: 19px;
+}
+
+li:hover {
+    color: white;
+}

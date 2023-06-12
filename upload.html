@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Details</title>
+    <link rel="stylesheet" href="upload.css">
+    <link rel="icon" href="images/connexa.ico">
+</head>
+
+<body>
+    <h1 class="wlcm">
+        <font color=black>Please Upload the Needed<br>Files here.</font>
+    </h1>
+    <div class="box">
+        <div class="content">
+            <h1 class="details">Enter Your Details:</h1>
+            <form class="add" id="add-form">
+                <label><font color=white>Aadhaar Card:</font></label>
+                <input class="ac" type="file" id="myfile" name="myfile"><br>
+
+                <label><font color=white>Pan Card:</font></label>
+                <input class="pc" type="file" id="myfile" name="myfile"><br>
+
+                <label><font color=white>Driving Licence:</font></label>
+                <input class="dl" type="file" id="myfile" name="myfile">
+                <button type="submit" class="btn" id="btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-database.js"></script>
+    <script type="module" src="upload.js"></script>
+</body>
+
+</html>
