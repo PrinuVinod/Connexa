@@ -78,7 +78,7 @@ const workerComponent = (worker) => {
             <div class="stars">${stars}${unfilledStars}</div>
             <p>Minimum Fees: Rs.${worker?.description ?? ""}</p>
             <div class="avail">${circle}${unfilledcircle}</div>
-            <div class="stars">
+            ${auth.currentUser ? `<div class="stars">
                Rate employee:  
                <select id="${worker.id}">
                 <option value="0" selected>0</option>
@@ -88,7 +88,7 @@ const workerComponent = (worker) => {
                 <option value="4">4</option>
                 <option value="5">5</option>
                </select>
-            </div>
+            </div>` : ""}
         </div>
     </div>`
 }
