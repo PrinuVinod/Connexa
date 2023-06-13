@@ -12,6 +12,9 @@ body {
     margin-top: 50px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 100px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
 }
 
 .content {
@@ -21,7 +24,7 @@ body {
     font-size: 40px;
     margin-top: 10px;
     opacity: 0;
-        transform: translateY(30px);
+    transform: translateY(30px);
     animation: moveup 0.5s linear forwards;
 }
 
