@@ -124,6 +124,7 @@ onAuthStateChanged(auth, (user) => {
   console.log('user status changed:', user)
 })
 
+
 async function load() {
   let params = new URL(document.location.href).searchParams;
   const area = params.get("area").toUpperCase();
@@ -134,11 +135,11 @@ async function load() {
   if(result.empty) return;
   const workersContainer = document.querySelector("#workers-container");
   result.forEach(worker => {
-    if(worker.exists())workersContainer.innerHTML += workerComponent({...worker.data(), id: "A"+worker.id});
+    if(worker.exists())workersContainer.innerHTML += workerComponent({...worker.data(), id: worker.id});
   })
   if(auth.currentUser) {
     result.forEach(worker => {
-      document.querySelector("#A"+worker.id).addEventListener("change", async e => {
+      document.querySelector("#"+worker.id).addEventListener("change", async e => {
         if(!confirm("Are you sure you want to add review of: " + e.target.value)) return;
         const data = worker.data();
         let newReview;
