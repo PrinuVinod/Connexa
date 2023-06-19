@@ -55,7 +55,7 @@ const workerComponent = (worker) => {
             <div class="phno"><font color=orange>Phone Number: </font>${worker.phoneno}</div>
             <div class="phno"><font color=orange>Area: </font>${worker.area}</div>
             <div class="phno"><font color=orange>Field: </font>${worker.field}</div>
-            <div class="avail"><font color=orange>Availability Status: </font>${worker.avail}</div>
+            <div class="avail"><font color=orange>Availability Status: </font>${worker?.avail ? "Available" : "Not Available"}</div>
             <p class="desc"><font color=orange>Minimum Wages: </font>${worker?.description ?? ""}</p>
             <a href="${worker.aadhar}">Aadhar</a>
             <a href="${worker.licence}">Licence</a>
