@@ -57,6 +57,9 @@ const workerComponent = (worker) => {
             <div class="phno"><font color=orange>Field: </font>${worker.field}</div>
             <div class="avail"><font color=orange>Availability Status: </font>${worker.avail}</div>
             <p class="desc"><font color=orange>Minimum Wages: </font>${worker?.description ?? ""}</p>
+            <a href="${worker.aadhar}">Aadhar</a>
+            <a href="${worker.licence}">Licence</a>
+            <a href="${worker.pan}">Pan</a>
     </div>`
 }
 
@@ -72,12 +75,21 @@ onAuthStateChanged(auth, (user) => {
         document.querySelector(".details").innerHTML = workerComponent(userData);
         availabilityCheckbox.checked = userData.avail ?? false;
         availabilityCheckbox.disabled = false;
-        return;
-      }
+        const data = userSnapshot.data();
+        if(!(data.aadhar && data.licence && data.pan)) {
+          window.location = `${location.protocol}//${window.location.host}/upload.html`;
+        }
+      } else {
+
         window.location = `http://${window.location.host}/worker.html`;
+      }
     })()
+  } else {
+    alert("Sign in as worker to upload docs.")
+    location.assign("signupw.html")
   }
 })
+
 
 //Signing out
 const logoutButton = document.querySelector('.logout')

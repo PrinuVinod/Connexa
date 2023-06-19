@@ -34,9 +34,12 @@ onAuthStateChanged(auth, (user) => {
     (async () => {
       const userSnapshot = await getDoc(doc(db, "workers", auth.currentUser.uid));
       if(userSnapshot.exists()) {
-        window.location = `http://${window.location.host}/details.html`;
-      }
+        window.location = `${location.protocol}//${window.location.host}/details.html`;
+      } 
     })()
+  } else {
+    alert("Sign in as worker to add details.")
+    location.assign("signupw.html")
   }
 })
 
