@@ -31,6 +31,7 @@ export default defineConfig({
             worker: resolve(__dirname, "worker.html"),
             details: resolve(__dirname, "details.html"),
             update: resolve(__dirname, "update.html"),
+            upload: resolve(__dirname, "upload.html"),
          },
       },
    },
