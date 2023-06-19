@@ -101,15 +101,16 @@
 
 .logo {
     font-size: 200px;
-    font-family: Arial;
+    font-family: 'Rancho';
     text-align: center;
     padding-top: 1px;
-    margin-left: 175px;
+    margin-left: 300px;
     margin-top: 100px;
     color: white;
     opacity: 0;
     transform: translateY(30px);
     animation: moveup 0.5s linear forwards;
+    letter-spacing: 10px;
 }
 
 @keyframes moveup{

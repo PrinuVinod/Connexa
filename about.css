@@ -9,7 +9,7 @@ body {
 
 .about {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 100px;
     opacity: 0;
@@ -19,9 +19,10 @@ body {
 
 .content {
     text-align: center;
+    line-height: 1;
     margin-top: 150px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 10px;
     opacity: 0;
     transform: translateY(30px);
@@ -113,6 +114,11 @@ ul li a {
 
 .showMenu {
     transform: translateY(0);
+}
+
+.wlcm {
+    font-family: 'Rancho';
+    font-size: 100px;
 }
 
 a,

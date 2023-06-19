@@ -15,6 +15,9 @@ body {
     margin-top: 150px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 100px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
 }
 
 .gmail {
@@ -24,7 +27,18 @@ body {
     font-size: 50px;
     margin-top: 10px;
     font-style: none;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
 }
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -269,14 +283,18 @@ h1 {
     bottom: 0;
     left: 0;
     inset: 0 0 0 0;
-    background: white;
+    background: orange;
+    color: black;
     z-index: -1;
     transition: transform .3s ease;
 }
 
+
+
 .gmail {
     position: relative;
     font-size: 5rem;
+    font-family: 'Rancho';
 }
 
 @media (orientation: landscape) {
