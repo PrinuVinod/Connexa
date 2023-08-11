@@ -67,7 +67,7 @@ const logoutButtonnn = document.querySelector('.logouttt')
 logoutButtonnn.addEventListener('click', () => {
   signOut(auth)
     .then(() => {
-      alert("Successfully Logged Out")
+      alert("Transfer To Login Page?")
       window.location.assign("signupw.html")
     })
     .catch((err) => {
