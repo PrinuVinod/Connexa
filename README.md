@@ -20,5 +20,5 @@ Connexa is a cutting-edge web application designed to simplify the process of fi
 BackEnd > ***JavaScript*** <br>
 DataBase Used > ***FireBase***
 
-### `You Can the Web-App Hosted in this link`
+### `Check Out our Website`
 [Connexa](https://connexa-liard.vercel.app/)
